@@ -14,7 +14,7 @@ import streamlit as st
 import pandas as pd
 
 # Ruta del archivo CSV para guardar la información
-file_path = '/Users/juliansanchez/App_pagos/pagos_data.csv'
+file_path = 'pagos_data.csv'
 
 # Cargar el archivo CSV existente
 df = pd.read_csv(file_path)
