@@ -20,7 +20,7 @@ file_path = 'pagos_data.csv'
 df = pd.read_csv(file_path)
 
 # Título de la aplicación con imagen
-st.image('/Users/juliansanchez/App_pagos/A_small_icon-style_image_that_represents_a_financi.png', width=120)
+st.image('A_small_icon-style_image_that_represents_a_financi.png', width=120)
 st.title('Gestor de Pagos')
 
 # Mostrar la tabla con los pagos
