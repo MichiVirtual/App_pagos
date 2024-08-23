@@ -3,21 +3,19 @@
 """
 Created on Fri Aug  9 21:38:45 2024
 
-@author: juliansanchez
 
-cd /Users/juliansanchez/App_pagos
-streamlit run pagosApp.py
-
-
-"""
-import streamlit as st
+"""import streamlit as st
 import pandas as pd
 
 # Ruta del archivo CSV para guardar la información
 file_path = 'pagos_data.csv'
 
 # Cargar el archivo CSV existente
-df = pd.read_csv(file_path)
+try:
+    df = pd.read_csv(file_path)
+except FileNotFoundError:
+    # Crear un DataFrame vacío si el archivo no existe
+    df = pd.DataFrame(columns=['Cuenta', 'Valor', 'Fecha de Pago', 'Pagado'])
 
 # Título de la aplicación con imagen
 st.image('A_small_icon-style_image_that_represents_a_financi.png', width=120)
@@ -74,9 +72,15 @@ nueva_fecha_pago = st.text_input('Fecha de Pago (día del mes o "Indeterminado")
 
 if st.button('Agregar Cuenta'):
     if nueva_cuenta:
-        nueva_fila = {"Cuenta": nueva_cuenta, "Valor": nuevo_valor, "Fecha de Pago": nueva_fecha_pago or "Indeterminado", "Pagado": False}
-        df = df.append(nueva_fila, ignore_index=True)
+        nueva_fila = pd.DataFrame({
+            "Cuenta": [nueva_cuenta],
+            "Valor": [nuevo_valor],
+            "Fecha de Pago": [nueva_fecha_pago or "Indeterminado"],
+            "Pagado": [False]
+        })
+        df = pd.concat([df, nueva_fila], ignore_index=True)
         df.to_csv(file_path, index=False)
         st.experimental_rerun()
 
 # Ejecución de la aplicación: streamlit run pagosApp.py
+
