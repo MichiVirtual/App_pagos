@@ -30,16 +30,16 @@ st.header('Estado de Pagos')
 for i in range(len(df)):
     col1, col2, col3, col4, col5 = st.columns([2.5, 1.5, 1.5, 1.5, 1.5])
     with col1:
-        cuenta = st.text_input(f"Cuenta {i+1}", df.at[i, 'Cuenta'], key=f'cuenta_{i}')
+        cuenta = st.text_input("", df.at[i, 'Cuenta'], key=f'cuenta_{i}')
         df.at[i, 'Cuenta'] = cuenta
     with col2:
-        valor = st.number_input(f"Valor {i+1}", df.at[i, 'Valor'], key=f'valor_{i}')
+        valor = st.number_input("", df.at[i, 'Valor'], key=f'valor_{i}')
         df.at[i, 'Valor'] = valor
     with col3:
-        fecha_pago = st.text_input(f"Fecha de Pago {i+1}", df.at[i, 'Fecha de Pago'], key=f'fecha_pago_{i}')
+        fecha_pago = st.text_input("", df.at[i, 'Fecha de Pago'], key=f'fecha_pago_{i}')
         df.at[i, 'Fecha de Pago'] = fecha_pago
     with col4:
-        pagado = st.checkbox('Pagado', df.at[i, 'Pagado'], key=f'pagado_{i}')
+        pagado = st.checkbox('', df.at[i, 'Pagado'], key=f'pagado_{i}')
         df.at[i, 'Pagado'] = pagado
     with col5:
         st.write("")  # Espacio vacío para alineación
