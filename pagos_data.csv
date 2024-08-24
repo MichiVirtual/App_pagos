@@ -1,19 +1,20 @@
 Cuenta,Valor,Fecha de Pago,Pagado
 Portafolio,57000,Indeterminado,True
 Claro,68000,2,True
-Bancolombia Hipotecario,820000,8,True
-Administración Verdhia,250000,10,True
-Codensa Verdhia,80000,15,False
-Agua Verdhia,40000,17,False
-Gas Verdhia,5000,10,False
-Claro 19,180000,19,False
+BanHipotecario,820000,8,True
+AdministraciónV,250000,10,True
+CodensaV,80000,15,False
+AguaV,40000,17,False
+GasV,5000,10,False
+ClaroV,180000,19,False
 Netflix,18000,Indeterminado,False
 Mamá,50000,Indeterminado,False
 Diarios,1400000,Indeterminado,False
-Davivienda libranza,2557000,Indeterminado,True
-Davivienda 40 mill* 5433,950000,20,False
+LibranzaC,2557000,Indeterminado,True
 ChatGPT,90000,Indeterminado,False
 Arriendo Apto,700000,1,True
-Servicios apto centro,100000,Indeterminado,True
-Arriendo moto,110000,Indeterminado,False
-Crédito móvil Davivienda,264000,9,False
+Servicios Apto,100000,Indeterminado,True
+Arriendo Moto,110000,Indeterminado,False
+Crédito 5853D,264000,9,False
+Crédito 8976D,439000,20,False
+Crédito 4522D,266000,20,False
